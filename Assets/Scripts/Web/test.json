@@ -1,0 +1,86 @@
+[
+{
+    "type": "Novatel",
+    "name": "novatel",
+    "params": {
+      "TopicInsPVA": "/novatel/inspva",
+      "TopicRawImuX": "/novatel/rawimux",
+      "TopicMarkCount": "/novatel/markcount",
+      "TopicBestPos": "/novatel/bestpos",
+      "TopicCorrImu": "/novatel/corrimu",
+      "TopicHeading": "/novatel/heading",
+      "FrameId": "novatel",
+      "Frequency": 20,
+      "ImuType": 33,
+      "ImuCelsius": 38,
+      "EncoderRPMtoPPS": 16.6666
+    },
+    "transform": {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "pitch": 0,
+      "yaw": 0,
+      "roll": 0
+    }
+  },
+  {
+    "type": "Lidar",
+    "name": "velodyne64",
+    "params": {
+      "LaserCount": 64,
+      "MinDistance": 0.5,
+      "MaxDistance": 120,
+      "RotationFrequency": 10,
+      "MeasurementsPerRotation": 360,
+      "FieldOfView": 26.9,
+      "CenterAngle": 10,
+      "Compensated": true,
+      "PointColor": "#ff000000",
+      "Topic": "/lidar/velodyne64",
+      "Frame": "velodyne64"
+    },
+    "transform": {
+      "x": -0.003726033995784693,
+      "y": 2.15,
+      "z": -0.632238599,
+      "pitch": 0,
+      "yaw": 0,
+      "roll": 0
+    }
+  },
+{
+    "type": "ChassisData",
+    "name": "CAN Bus",
+    "params": {
+      "Frequency": 30,
+      "Topic": "/ipc/chassis"
+    },
+    "transform": {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "pitch": 0,
+      "yaw": 0,
+      "roll": 0
+    }
+},
+{
+    "type": "Manual Control",
+    "name": "Manual Car Control"
+},
+{
+    "type": "Snowball Control",
+    "name": "Snowball Car Control",
+    "params": {
+      "Topic": "/ipc/request"
+    }
+},
+{
+    "type": "Signal Sensor",
+    "name": "Signal Ground Truth",
+    "params": {
+      "Topic": "/perception/trafficlight"
+    }
+}
+]
